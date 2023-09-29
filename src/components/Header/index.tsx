@@ -3,7 +3,6 @@ import { HeaderContainer, HeaderContent, NewTransactionButton } from './styles'
 import { defaultTheme } from '../../styles/themes/default'
 import * as Dialog from '@radix-ui/react-dialog'
 import { NewTransactionModal } from '../NewTransactionModal'
-import { useState } from 'react'
 
 export function Header() {
   return (
