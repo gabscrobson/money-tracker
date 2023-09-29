@@ -1,0 +1,44 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Bought a new laptop",
+      "type": "outcome",
+      "category": "Personal",
+      "price": 1000,
+      "date": "2023-09-28T13:24:16.931Z"
+    },
+    {
+      "id": 2,
+      "description": "Website development",
+      "type": "income",
+      "category": "Dev",
+      "price": 5000,
+      "date": "2023-09-28T13:24:16.931Z"
+    },
+    {
+      "id": 3,
+      "description": "Bought a new car",
+      "type": "outcome",
+      "category": "Car",
+      "price": 20000,
+      "date": "2023-09-28T13:24:16.931Z"
+    },
+    {
+      "description": "Hamburger",
+      "price": 2,
+      "category": "Food",
+      "type": "outcome",
+      "date": "2023-09-29T01:17:01.432Z",
+      "id": 4
+    },
+    {
+      "description": "Remédio",
+      "price": 50,
+      "category": "Saúde",
+      "type": "outcome",
+      "date": "2023-09-29T04:07:11.645Z",
+      "id": 5
+    }
+  ]
+}
