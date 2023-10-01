@@ -9,7 +9,7 @@ export function Header() {
     <HeaderContainer>
       <HeaderContent>
         <div>
-          <CurrencyCircleDollar size={40} color={defaultTheme['orange-500']} />
+          <CurrencyCircleDollar size={40} color={defaultTheme['main-500']} />
           <h1>Money Tracker</h1>
         </div>
 

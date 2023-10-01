@@ -15,7 +15,7 @@ export const SearchFormContainer = styled.form`
 
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 1.5px ${(props) => props.theme['orange-500']};
+      box-shadow: 0 0 0 1.5px ${(props) => props.theme['main-500']};
     }
 
     &::placeholder {
@@ -31,16 +31,16 @@ export const SearchFormContainer = styled.form`
     border: 0;
     padding: 1rem;
     background: transparent;
-    border: 1px solid ${(props) => props.theme['orange-300']};
-    color: ${(props) => props.theme['orange-300']};
+    border: 1px solid ${(props) => props.theme['main-500']};
+    color: ${(props) => props.theme['main-500']};
     font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
     transition: 0.2s;
 
     &:not(:disabled):hover {
-      background: ${(props) => props.theme['orange-500']};
-      border-color: ${(props) => props.theme['orange-500']};
+      background: ${(props) => props.theme['main-500']};
+      border-color: ${(props) => props.theme['main-500']};
       color: ${(props) => props.theme.white};
     }
 

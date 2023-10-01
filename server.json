@@ -39,6 +39,62 @@
       "type": "outcome",
       "date": "2023-09-29T04:07:11.645Z",
       "id": 5
+    },
+    {
+      "description": "Internet",
+      "price": 100,
+      "category": "Casa",
+      "type": "outcome",
+      "date": "2023-09-29T23:02:41.332Z",
+      "id": 6
+    },
+    {
+      "description": "teste",
+      "price": 10,
+      "category": "teste",
+      "type": "income",
+      "date": "2023-09-29T23:03:59.926Z",
+      "id": 7
+    },
+    {
+      "description": "Japones",
+      "price": 77,
+      "category": "Alimentacao",
+      "type": "outcome",
+      "date": "2023-09-30T22:07:17.581Z",
+      "id": 8
+    },
+    {
+      "description": "Salario",
+      "price": 850.5,
+      "category": "Trabalho",
+      "type": "income",
+      "date": "2023-09-30T22:09:01.781Z",
+      "id": 9
+    },
+    {
+      "description": "Salario 2",
+      "price": 15368.5,
+      "category": "Trabalho",
+      "type": "income",
+      "date": "2023-09-30T22:50:32.322Z",
+      "id": 10
+    },
+    {
+      "description": "teste",
+      "price": 15,
+      "category": "teste",
+      "type": "income",
+      "date": "2023-09-30T22:51:45.792Z",
+      "id": 11
+    },
+    {
+      "description": "teste",
+      "price": 30,
+      "category": "Alimentacao",
+      "type": "outcome",
+      "date": "2023-09-30T22:52:46.774Z",
+      "id": 12
     }
   ]
 }

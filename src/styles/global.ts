@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background: ${(props) => props.theme['orange-300']};
+    background: ${(props) => props.theme['main-700']};
     color: ${(props) => props.theme['gray-100']};
   }
 

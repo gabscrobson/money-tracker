@@ -3,7 +3,7 @@ import { styled } from 'styled-components'
 export const TransactionsContainer = styled.div`
   width: 90%;
   max-width: 1120px;
-  margin: 4rem auto 0;
+  margin: 4rem auto 3rem;
 `
 
 export const TransactionsTable = styled.table`
@@ -15,10 +15,12 @@ export const TransactionsTable = styled.table`
   td {
     padding: 1.25rem 2rem;
     background: ${(props) => props.theme['gray-700']};
+    text-align: right;
 
     &:first-child {
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;
+      text-align: left;
     }
 
     &:last-child {

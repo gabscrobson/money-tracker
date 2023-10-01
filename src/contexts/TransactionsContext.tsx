@@ -1,5 +1,6 @@
-import { createContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { api } from '../lib/axios'
+import { createContext } from 'use-context-selector'
 
 interface Transaction {
   id: number
@@ -58,7 +59,7 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
       type,
       date: new Date().toISOString(),
     })
-    setTransactions((prev) => [...prev, response.data])
+    setTransactions((prev) => [response.data, ...prev])
   }
 
   return (

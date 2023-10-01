@@ -10,10 +10,20 @@ export const SummaryContainer = styled.section`
   gap: 2rem;
 
   margin-top: -5rem;
+
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 interface SummaryCardProps {
-  variant?: 'orange'
+  variant?: 'negative' | 'neutral' | 'positive'
+}
+
+const summaryCardVariants = {
+  negative: 'red-300',
+  neutral: 'white',
+  positive: 'green-300',
 }
 
 export const SummaryCard = styled.div<SummaryCardProps>`
@@ -37,9 +47,8 @@ export const SummaryCard = styled.div<SummaryCardProps>`
   }
 
   ${(props) =>
-    props.variant === 'orange' &&
+    props.variant &&
     css`
-      background: ${props.theme['orange-700']};
-      color: ${props.theme.white};
+      color: ${props.theme[summaryCardVariants[props.variant]]};
     `}
 `
