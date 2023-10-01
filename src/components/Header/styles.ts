@@ -41,6 +41,6 @@ export const NewTransactionButton = styled.button`
   transition: 0.2s;
 
   &:hover {
-    background: ${(props) => props.theme['main-500']};
+    opacity: 0.8;
   }
 `
