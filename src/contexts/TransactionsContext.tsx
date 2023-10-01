@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { api } from '../lib/axios'
 import { createContext } from 'use-context-selector'
 
 interface Transaction {
@@ -38,28 +37,40 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
     fetchTransactions()
   }, [])
 
-  // Fetch transactions from API
+  // Fetch transactions from LocalStorage and filter by query
   async function fetchTransactions(query?: string) {
-    const response = await api.get('/transactions', {
-      params: {
-        _sort: 'date',
-        _order: 'desc',
-        q: query,
-      },
-    })
-    setTransactions(response.data)
+    const stateJSON = localStorage.getItem('@money-tracker:transactions-1.0')
+    let state = stateJSON ? JSON.parse(stateJSON) : []
+    if (query) {
+      const queryRegex = new RegExp(query, 'i')
+      state = state.filter((transaction: Transaction) => {
+        return (
+          transaction.description.match(queryRegex) ||
+          transaction.category.match(queryRegex)
+        )
+      })
+    }
+
+    setTransactions(state)
   }
 
+  // Create new transaction
   async function createTransaction(data: CreateTransactionData) {
     const { description, price, category, type } = data
-    const response = await api.post('/transactions', {
+    const newTransaction = {
+      id: Math.random(),
       description,
       price,
       category,
       type,
       date: new Date().toISOString(),
-    })
-    setTransactions((prev) => [response.data, ...prev])
+    }
+    const updatedTransactions = [...transactions, newTransaction]
+    setTransactions(updatedTransactions)
+    localStorage.setItem(
+      '@money-tracker:transactions-1.0',
+      JSON.stringify(updatedTransactions),
+    )
   }
 
   return (

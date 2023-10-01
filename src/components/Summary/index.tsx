@@ -57,7 +57,7 @@ export function Summary() {
       <SummaryCard variant={totalSummaryCardVariant}>
         <header>
           <span>Total</span>
-          <CurrencyDollar size={32} color={defaultTheme['main-500']} />
+          <CurrencyDollar size={32} />
         </header>
         <strong>{priceFormatter.format(summary.total)}</strong>
       </SummaryCard>

@@ -46,6 +46,11 @@ export const SummaryCard = styled.div<SummaryCardProps>`
     line-height: 3rem;
   }
 
+  svg {
+    color: ${(props) =>
+      props.variant && props.theme[summaryCardVariants[props.variant]]};
+  }
+
   ${(props) =>
     props.variant &&
     css`
